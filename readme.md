@@ -1,12 +1,33 @@
 # Linebreak Template Filter
 
-The template filter adds inserts HTML line breaks `<br>` before new lines in a `textarea` field type.
+The [template filter](https://docs.grabaperch.com/api/template-filters/) inserts HTML line breaks `<br>` before new lines in a `textarea` field type.
+
+
+## Installation
+
+- Download the latest version of the template filter
+- Unzip the download
+- Place the `PipitTemplateFilter_linebreak.class.php` file in the folder `perch/addons/templates/filters/`
+- Include the class in the file `perch/addons/templates/filters.php`:
+
+```php
+include('filters/PipitTemplateFilter_linebreak.class.php');
+```
+
+You also need to enable template filters in your config:
+
+```php
+define('PERCH_TEMPLATE_FILTERS', true);
+```
+
 
 
 ## Usage
 
 ```markup
-<perch:content id="address" type="textarea" label="Company Address" filter="linebreak">
+<p>
+    <perch:content id="address" type="textarea" label="Company Address" filter="linebreak">
+</p>
 ```
 
 
